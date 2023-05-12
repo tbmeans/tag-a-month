@@ -8,10 +8,10 @@ describe('empty spec', () => {
     .contains('Tag an entire month of saves with one click');
   })
   it('renders the image', () => {
-    cy.get('img')
+    cy.get('svg')
     .should('be.visible')
-    .and(($img) => {
-      expect($img[0].naturalWidth).to.be.greaterThan(0);
+    .and(($svg) => {
+      expect($svg[0].naturalWidth).to.be.greaterThan(0);
     })
   })
 })
