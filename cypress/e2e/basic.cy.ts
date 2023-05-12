@@ -11,7 +11,7 @@ describe('empty spec', () => {
     cy.get('svg')
     .should('be.visible')
     .and(($svg) => {
-      expect($svg[0].naturalWidth).to.be.greaterThan(0);
+      expect($svg[0].width.baseVal.value).to.be.greaterThan(0);
     })
   })
 })
