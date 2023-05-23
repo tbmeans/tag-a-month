@@ -1,0 +1,20 @@
+text.title {
+  font-size: 2px;
+  font-style: italic;
+}
+
+text.mo-ch {
+  font-size: 4px;
+}
+
+line {
+  stroke: black;
+}
+
+line.timeline-bar {
+  stroke-width: 0.4;
+}
+
+line.callout {
+  stroke-width: 0.2;
+}
