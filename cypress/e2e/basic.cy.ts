@@ -5,7 +5,7 @@ describe('empty spec', () => {
 
   it('displays the resources text', () => {
     cy.get('h2')
-    .contains('Tag an entire month of saves with one click');
+    .contains('Tag an entire month of saves in just a few clicks!');
   })
   it('renders the image', () => {
     cy.get('svg')
