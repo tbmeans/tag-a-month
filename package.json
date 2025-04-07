@@ -1,0 +1,27 @@
+{
+  "name": "tag-a-month",
+  "version": "1.0.0",
+  "description": "Consumes Pocket API to bulk tag saves by month and date saved",
+  "main": "server.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tbmeans/tag-a-month.git"
+  },
+  "keywords": [
+    "pocket",
+    "api"
+  ],
+  "author": "Timothy Means",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/tbmeans/tag-a-month/issues"
+  },
+  "homepage": "https://github.com/tbmeans/tag-a-month#readme",
+  "devDependencies": {
+    "jest": "^29.7.0",
+    "typescript": "^5.8.3"
+  }
+}
