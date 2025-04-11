@@ -2,8 +2,9 @@
   "name": "tag-a-month",
   "version": "1.0.0",
   "description": "Consumes Pocket API to bulk tag saves by month and date saved",
-  "main": "server.js",
+  "main": "dist/server.js",
   "scripts": {
+    "start": "tsc && node dist/server.js",
     "test": "jest"
   },
   "repository": {
