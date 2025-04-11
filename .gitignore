@@ -38,3 +38,10 @@ testem.log
 # System files
 .DS_Store
 Thumbs.db
+
+# https certs
+*.pem
+*.pfx
+
+# environment
+env.ts
