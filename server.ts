@@ -1,13 +1,12 @@
 // server.ts
 
 import { createServer, IncomingMessage } from 'node:http';
-import env from './env'
 import { Consts } from './appConstants';
 import controllers from './controllers';
 import * as api from './apiRequests';
 
-const hostname = env.IS_PRODUCTION && '0.0.0.0' || 'localhost';
-const port = env.IS_PRODUCTION && 80 || 4000;
+const hostname = process.env.IS_PRODUCTION && '0.0.0.0' || 'localhost';
+const port = process.env.IS_PRODUCTION && 80 || 4000;
 
 const getCookies = (req: IncomingMessage) => {
 	if (req.headers.cookie == null) {
@@ -44,7 +43,7 @@ const server = createServer(function(req, res) {
 		controller = controllers.index;
 	} else if (cookieCt1AndIsInvalid && route === Consts.NEX1) {
 		const data = api.toOAuthCookie(api.setOpts(route),
-				{ consumer_key: env.CONSUMER_KEY });
+				{ consumer_key: process.env.CONSUMER_KEY });
 		if (data[0].includes(Consts.ERR1)) {
 			controller = controllers.index;
 			params[1] = data[0] + '<br>';
@@ -58,7 +57,7 @@ const server = createServer(function(req, res) {
 		params[1] = cookies[0].split('=')[1];
 	} else if (cookieCt1AndIsValid && route === Consts.NEX2) {
 		const data = api.toOAuthCookie(api.setOpts(route), {
-			consumer_key: env.CONSUMER_KEY,
+			consumer_key: process.env.CONSUMER_KEY,
 			code: cookies[0].split('=')[1]
 		});
 		if (data[0].includes(Consts.ERR1)) {

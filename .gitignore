@@ -39,9 +39,5 @@ testem.log
 .DS_Store
 Thumbs.db
 
-# https certs
-*.pem
-*.pfx
-
 # environment
-env.ts
+.env
