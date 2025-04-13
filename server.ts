@@ -72,7 +72,7 @@ const server = createServer(function(req, res) {
 		// a different message that says 'restarting app' instead of auth's message?
 	} else if (cookieCt2AndIsValid && route === Consts.NEX3) {
 		// api data request to fill app form etc.
-		controller = controllers[route];
+		controller = controllers.app1;
 	} // */
 	/* // FOR COOKIE TEST
 	res.setHeader('Set-Cookie', [
