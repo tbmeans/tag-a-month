@@ -1,7 +1,5 @@
 // appConstants.ts
 
-import PLATFORM_CONSUMER_KEY from "./env";
-
 export enum Consts {
 	MSG1 = "Login to connect with Pocket",
 	MSG2 = "Preparing to login and obtain a request token from Pocket.",
@@ -10,15 +8,32 @@ export enum Consts {
 	NEX1 = "login",
 	NEX2 = "auth",
 	NEX3 = "saves-dash",
-	FUT1 = " 2025, Tim Means. Makes use of the ",
-	FUT2 = '<a href="https://getpocket.com/developer/">Pocket API</a>.',
 	COD1 = 'const DEST = "https://getpocket.com/auth/authorize?request_token=',
-	COD2 = '&redirect_uri=https://spaghetti.us-east-1.s3-amazonaws.com/auth"; ',
-	COD3 = 'const promcall = (res) => { setTimeout(() => res(DEST), 3000); }; ' +
+	COD2 = '&redirect_uri=https://multi-select.netlify.app/"; ',
+	COD3 = 'const promcall = (res) => { setTimeout(() => res(DEST), 1000); }; ' +
 			'const delay = () => new Promise(promcall); const redir = async ' +
 					'function() { window.location.href = await delay(); }; redir();',
-	COD4 = 'const DEST = "https://localhost:3000/saves-dash";', /*
-	COD4 = 'const DEST = "https://spaghetti.us-east-1.s3-amazonaws.com' +
-			'/saves-dash";', */
-	CONSUMER_KEY = PLATFORM_CONSUMER_KEY,  /* for git repo's sake, abstracted away */
+	COD4 = 'const DEST = "https://multi-select.netlify.app/";',
+	KEY1 = 'token',
+	KEY2 = 'username',
+	DOCH = '<!DOCTYPE html> <html lang="en"> <head> <meta charset="utf-8"> ' +
+			'<meta name="viewport" content="width=device-width, initial-scale=1">' +
+					'<title>Tag Pocket saves in bulk</title>',
+	STY1 = '<style> body{ background-color:#272727; font-family: Segoe UI,' +
+			'Tahoma,Geneva,Verdana,sans-serif; font-family: Arial,Helvetica,' +
+					'sans-serif; color:#789; text-align:center; } h1, h2, h3 { ' + 
+							'margin: 2rem auto; } footer { padding-top: 2rem; } button { ' +
+									'border: none; border-radius: .4rem; background-color: ' +
+											'#204060; color: #a9a9a9; margin: .5rem; padding: ' +
+													'.5rem 2rem; } button:active { background-color: ' +
+															'#406080; } </style> </head>',
+	BODH = '<body> <header> <h2> Bulk tag your Pocket saves <br> with the ' + 
+			'year & month saved! </h2> </header>',
+	FOOT = '<footer> 2025, Tim Means. Makes use of the ' + 
+			'<a href="https://getpocket.com/developer/">Pocket API</a>. </footer>',
+	BTN1 = '<button type="button">Login</button>',
+	DOCC = '</body></html>',
+	API1 = 'https://getpocket.com/v3',
+	OPTS = "; Secure; HttpOnly",
+	ERR1 = "Problem with API request: ",
 }
