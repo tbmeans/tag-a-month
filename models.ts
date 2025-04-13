@@ -2,7 +2,11 @@
 import { PageData } from './pageData';
 import { Consts } from './appConstants';
 
-const query = function(routeName: string, token: string): PageData {
+const query = function(
+	routeName: string,
+	token: string = '',
+	errorMessage: string = ''
+): PageData {
 	let message: string;
 	let nexRoute: string;
 
@@ -20,7 +24,7 @@ const query = function(routeName: string, token: string): PageData {
 			nexRoute = Consts.NEX3;
 			break;
 		default:
-			message = Consts.MSG1;
+			message = errorMessage + Consts.MSG1;
 			nexRoute = Consts.NEX1;
 	}
 
