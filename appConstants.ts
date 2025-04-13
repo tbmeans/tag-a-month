@@ -9,11 +9,11 @@ export enum Consts {
 	NEX2 = "auth",
 	NEX3 = "saves-dash",
 	COD1 = 'const DEST = "https://getpocket.com/auth/authorize?request_token=',
-	COD2 = '&redirect_uri=https://multi-select.netlify.app/"; ',
+	COD2 = '&redirect_uri=https://tag-date.netlify.app/"; ',
 	COD3 = 'const promcall = (res) => { setTimeout(() => res(DEST), 1000); }; ' +
 			'const delay = () => new Promise(promcall); const redir = async ' +
 					'function() { window.location.href = await delay(); }; redir();',
-	COD4 = 'const DEST = "https://multi-select.netlify.app/";',
+	COD4 = 'const DEST = "https://tag-date.netlify.app/";',
 	KEY1 = 'token',
 	KEY2 = 'username',
 	DOCH = '<!DOCTYPE html> <html lang="en"> <head> <meta charset="utf-8"> ' +
